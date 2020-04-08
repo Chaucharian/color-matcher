@@ -1,0 +1,21 @@
+{
+  "name": "color-matcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "speechReconigtion.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chaucharian/color-matcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chaucharian/color-matcher/issues"
+  },
+  "homepage": "https://github.com/Chaucharian/color-matcher#readme"
+}
