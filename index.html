@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Color Matcher</title>
 </head>
 <body>
     <style>
         body {
-            display: flex;
-            justify-content: center;
             margin: 0px;
             padding: 0px;
             background-color: black;
@@ -18,8 +18,33 @@
             color: white;
             font-family: sans-serif;
           }
+          button {
+            border: 1px solid white;
+            background: transparent;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            outline: none;
+          }
+          button svg {
+            color: white;
+          }
+          #content {
+            text-align: center;
+          }
+          #buttonContainer {
+            display: flex;
+            justify-content: center;
+          }
     </style>
-    <h1>Canta un color :)</h1>
+    <div id="content">
+      <h1>Canta un color :)</h1>
+      <div id="buttonContainer">
+        <button>
+          <i class="fas fa-microphone"></i>
+        </button>
+      </div>
+    </div>
     <script src="./speechReconigtion.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   recognition.onstart = () => {
     paintScreen('black');
   }
-  recognition.onstart = () => console.log(" END! ");
+  // recognition.onend = () => console.log(" END! ");
 
   recognition.onresult = (event) => {
     for (var i = event.resultIndex; i < event.results.length; ++i) {
@@ -50,4 +50,5 @@
     body.style.backgroundColor = color;
   }
 
-  recognition.start();
+  document.getElementsByTagName('button')[0].addEventListener('mousedown', () => recognition.start(), false);
+  document.getElementsByTagName('button')[0].addEventListener('mouseup', () => recognition.stop(), false);
