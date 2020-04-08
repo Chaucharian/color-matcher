@@ -52,3 +52,5 @@
 
   document.getElementsByTagName('button')[0].addEventListener('mousedown', () => recognition.start(), false);
   document.getElementsByTagName('button')[0].addEventListener('mouseup', () => recognition.stop(), false);
+  document.getElementsByTagName('button')[0].addEventListener('touchstart', () => recognition.start(), false);
+  document.getElementsByTagName('button')[0].addEventListener('touchend', () => recognition.stop(), false);
