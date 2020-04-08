@@ -36,7 +36,7 @@
     } else if (statement.includes('blanco')) {
       currentColor = "white"
     }
-    console.log(statement," result ",currentColor);
+    document.getElementById('speech').innerText = currentColor;
     return currentColor;
   }
 
