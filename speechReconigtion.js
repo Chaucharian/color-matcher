@@ -22,7 +22,7 @@
     } else if (statement.includes('azul')) {
       currentColor = 'blue'
     } else if (statement.includes('amarillo')) {
-      currentColor = "yellow"
+      currentColor = "#ffdf00"
     }  else if (statement.includes('verde')) {
       currentColor = "green"
     } else if (statement.includes('negro')) {
@@ -30,7 +30,7 @@
     } else if (statement.includes('marron')) {
       currentColor = "brown"
     } else if (statement.includes('naranja')) {
-      currentColor = "orange"
+      currentColor = "#ff5e00"
     } else if (statement.includes('violeta')) {
       currentColor = "violet"
     } else if (statement.includes('blanco')) {
