@@ -27,36 +27,61 @@ const isAnyColor = color => {
   switch (color) {
     case 'rojo':
       outputColor = 'red';
+      notMatch = false;
       break;
     case 'azul':
       outputColor = 'blue';
+      notMatch = false;
       break;
     case 'amarillo':
       outputColor = '#ffdf00';
+      notMatch = false;
       break;
     case 'naranja':
       outputColor = '#ff5e00';
+      notMatch = false;
       break;
     case 'verde':
       outputColor = 'green';
+      notMatch = false;
       break;
     case 'negro':
       outputColor = 'black';
+      notMatch = false;
       break;
     case 'marron':
       outputColor = 'brown';
+      notMatch = false;
       break;
-    case 'violeta':
+    case 'violetta':
       outputColor = '#a30dd4';
+      notMatch = false;
       break;
     case 'celeste':
       outputColor = '#20c1c1';
+      notMatch = false;
       break;
     case 'blanco':
       outputColor = 'white';
+      notMatch = false;
+      break;
+    case 'rosa':
+      outputColor = '#fb96a8';
+      notMatch = false;
+      break;
+    case 'bordo':
+      outputColor = '#960335';
+      notMatch = false;
+      break;
+    case 'gris':
+      outputColor = 'grey';
+      notMatch = false;
+      break;
+    default:
+      notMatch = true;
       break;
   }
-  document.getElementById('speech').innerText = color;
+  document.getElementById('speech').innerText = notMatch ? 'Ese no es un color' : color;
   return outputColor;
 }
 
