@@ -45,6 +45,9 @@ const isAnyColor = color => {
     case 'violeta':
       outputColor = '#a30dd4';
       break;
+    case 'celeste':
+      outputColor = '#20c1c1';
+      break;
     case 'blanco':
       outputColor = 'white';
       break;
@@ -59,7 +62,7 @@ const paintScreen = color => {
     document.getElementsByTagName('h1')[0].style.color = 'black';
   } else if (color === 'black') {
     document.getElementsByTagName('h1')[0].style.color = 'white';
-  }
+  } 
   body.style.backgroundColor = color;
 }
 
