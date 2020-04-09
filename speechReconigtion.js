@@ -13,6 +13,10 @@ recognition.continuous = false;
 recognition.lang = 'es-Es';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
+let isRecording = false;
+
+recognition.onend = () => isRecording = false;
+recognition.onstart = () => isRecording = true;
 
 recognition.onresult = (event) => {
   const color = event.results[0][0].transcript.split(" ")[event.results[0][0].transcript.split(" ").length - 1].toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -60,19 +64,26 @@ const paintScreen = color => {
   const body = document.getElementsByTagName('body')[0];
   if (color === 'white') {
     document.getElementsByTagName('h1')[0].style.color = 'black';
+    document.getElementById('speech').style.color = 'black';
   } else if (color === 'black') {
     document.getElementsByTagName('h1')[0].style.color = 'white';
+    document.getElementById('speech').style.color = 'white';
   } 
   body.style.backgroundColor = color;
 }
 
 const button = document.getElementsByTagName('button')[0];
+
 const startRecording = () => {
   button.style.border = '2px solid red';
-  recognition.start();
+  document.getElementsByClassName('fa-microphone')[0].style.color = 'red';
+  if(!isRecording) {
+    recognition.start();
+  }
 };
 const stopRecording = () => {
   button.style.border = '2px solid white';
+  document.getElementsByClassName('fa-microphone')[0].style.color = 'white';
   recognition.stop();
 };
 
